@@ -4,7 +4,7 @@
 
 - ScreenUtils 有获取屏幕宽高，及dp与px之间转换的方法等
 
-- PhoneInfoUtils  有获取手机设备号等方法
+- PhoneInfoUtils  有获取手机设备号,语言等方法
 
 - ConnectUtils  连接网络的判断(是否联网，联网的类型，网络状态等)
 

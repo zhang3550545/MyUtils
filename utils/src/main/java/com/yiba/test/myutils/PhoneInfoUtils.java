@@ -2,10 +2,13 @@ package com.yiba.test.myutils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.os.LocaleList;
 import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
 
 import java.util.Locale;
 
@@ -107,6 +110,19 @@ public class PhoneInfoUtils {
      */
     public static String getLocale() {
         return Locale.getDefault().toString();
+    }
+
+    /**
+     * 设置语言
+     */
+    public static void setLocale(Context context, Locale locale) {
+        if (locale == null) {
+            locale = Locale.getDefault();
+        }
+        Configuration configuration = context.getResources().getConfiguration();
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        configuration.locale = locale;
+        context.getResources().updateConfiguration(configuration, metrics);
     }
 
 }

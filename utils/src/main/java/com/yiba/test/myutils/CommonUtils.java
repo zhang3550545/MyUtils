@@ -38,26 +38,4 @@ public class CommonUtils {
     public static int getTID() {
         return Process.myTid();
     }
-
-    /**
-     * 获取手机当前使用语言的国家
-     */
-    public static String getCountry() {
-        return Locale.getDefault().getCountry();
-    }
-
-    /**
-     * 获取手机当前使用的语言
-     */
-    public static String getLanguage() {
-        return Locale.getDefault().getLanguage();
-    }
-
-    /**
-     * 获取手机当前使用的语言和国家
-     */
-    public static String getDefaultLocale() {
-        return Locale.getDefault().toString();
-    }
-
 }
